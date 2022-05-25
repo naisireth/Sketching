@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* NAV */
+.nav{
+    background: #293241;
+    height: 50px;
+    color: #fff;
+}
+
+.nav__container{
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__logo{
+    font-size: 1.3em;
+    font-weight: 900;
+}
+
+.nav__menu{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2.5em;
+}
+
+.nav__item{
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+    --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
+
+.nav__item::after{
+    content: "";
+    display: block;
+    background: #fff;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+    clip-path: var(--clippy);
+    transition: clip-path .5s;
+}
+
+.nav__label, .nav__input{
+    display: none;
+}
+
+.nav__item:hover{
+    --clippy: polygon(0 0, 100% 0, 100% 100%, 0 100%)
+}
+
+#fondo{
+    background: rgba(0, 0, 0, 0.3) url(../assets/desktop.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-blend-mode: darken;
+    z-index: -20;
+    width: 100%;
+    height: 400px;
+}
+
+.header__copy{
+    display: flex;
+    justify-content: center;
+    font-size: 36px;
+    padding: 140px 160px;
+    color: #fff;
+    text-shadow: rgba(0, 0, 0, 0.6) 0.1em 0.1em 0.2em;
+    font-weight: 900;
+    letter-spacing: 1.7px;
+}
+
+.background{
+    background-color: #8aa0ff;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.7px;
+    padding: 5px 0;
+    color: #293241;
+}
+
+.background:hover{
+    cursor: pointer;
+}
+
+/* MAIN*/
+.main{
+    margin: 40px auto;
+}
+
+.main__container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.section__container{
+    margin: 30px 20px;
+}
+
+#materiales{
+    background: rgba(0, 0, 0, 0.6) url(../assets/materiales.jpg) no-repeat center center;
+    border-radius: 10px;
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 80%;
+    height: 400px;
+}
+
+.section__title{
+    color: #fff;
+    font-size: 28px;
+    letter-spacing: 1.7px;
+    padding-top: 120px;   
+    margin-left: 80px;
+}
+
+.section__copy{
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1.7px;
+    padding-top: 20px;   
+    margin-left: 80px;
+}
+
+.cta__btn{
+    display: flex;
+    padding: 12px;
+    margin-left: 70px;
+    margin-top: 20px;
+    width: 190px;
+    border-radius: 7px;
+    justify-content: center;
+    background: #8aa0ff;
+    font-size: 16px;
+    font-weight: 900;
+    text-decoration: none;
+    color: #293241;
+    letter-spacing: 1.7px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.35);
+}
+
+.cta__btn:hover{
+    background: #7376c3;
+    color: #fff;
+}
+
+#estilos{
+    background: rgba(0, 0, 0, 0.6) url(../assets/estilos.jpg) no-repeat center center;
+    border-radius: 10px;
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 80%;
+    height: 400px;
+}
+
+#tecnicas{
+    background: rgba(0, 0, 0, 0.6) url(../assets/tecnicas.jpg) no-repeat center center;
+    border-radius: 10px;
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 80%;
+    height: 400px;
+}
+
+#youtube{
+    background: rgba(0, 0, 0, 0.6) url(../assets/youtube.jpg) no-repeat center center;
+    border-radius: 10px;
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 80%;
+    height: 400px;
+}
+
+/* FOOTER */
+
+.footer{
+    background: #293241;
+    height: 100px;
+}
+
+.footer__top{
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+    margin-bottom: 15px;
+    color: #fff;
+    letter-spacing: 1.7px;
+}
+
+.footer__bottom{
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    letter-spacing: 1.7px;
+    font-size: 14px;
+}
+
+@media (max-width: 700px){
+    marquee{
+        display: none;
+    }
+
+    .nav__label{
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav__logo{
+        margin-left: 15px;
+    }
+
+    .nav__item{
+        color: #FFF;
+        font-size: 16px;
+        letter-spacing: 1.7px;
+    }
+
+    .nav__menu{
+        position: fixed;
+        top: 50px;
+        bottom: 0;
+        background: #7376c3;
+        width: 100%;
+        left: 0;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+        transition: clip-path 1s ease-in-out;
+    }
+
+    .nav__input:checked + .nav__menu{
+        clip-path: circle(100% at center);
+    }
+
+    .header__copy{
+        padding: 110px 70px;
+        font-size: 26px;
+    }
+
+    /* MAIN SECTION */
+    #materiales{
+        width: 90%;
+    }
+
+    #estilos{
+        width: 90%;
+    }
+
+    #tecnicas{
+        width: 90%;
+    }
+
+    #youtube{
+        width: 90%;
+    }
+
+    .section__title{
+        padding-top: 90px;
+        margin: 0 40px;
+        font-size: 20px;
+    }
+
+    .section__copy{
+        margin: 0 40px;
+    }
+
+
+    .section__container{
+        margin: 30px auto;
+    }
+
+    .cta__btn{
+        margin: 40px auto;
+    }
+
+}
+
